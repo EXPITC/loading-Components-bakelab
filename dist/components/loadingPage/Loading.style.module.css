@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+/* blob part */
+.svgContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.blob {
+  opacity: 0.9;
+  transform: translateX(50%) translateY(45%);
+}
+svg {
+  width: 95%;
+  height: 95%;
+}
+/* chef animation part */
+.chefPrepare {
+  width: 50%;
+  height: 50vh;
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  transform: translateX(50%) translateY(50%);
+}
+
+/* greeting text part */
+.kindGreet {
+  position: absolute;
+  font-size: 5vw;
+  width: 100vw;
+  transform: translateY(50vh);
+}
+.kindGreet > h1 {
+  position: relative;
+  top: -10vw;
+  /* -webkit-text-stroke: 1px  #e4b684; */
+  font-family: 'Niconne', cursive;
+  transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  
+  text-shadow: #e4b684 0px 0px 5px, #e4b684 0px 0px 10px, #e4b684 0px 0px 15px,
+    0px 0px 20px, 0px 0px 30px, 0px 0px 40px, 0px 0px 50px, 0px 0px 75px,
+    2px 2px 2px rgba(206, 1, 1, 0);
+}
+.kindGreet > h1:nth-child(1) {
+    left: -15vw;
+    display: inline;
+    animation: leftMinus 0.8s forwards;
+}
+@keyframes leftMinus {
+    to {
+      text-shadow: 1px 1px 0 #e4b684, 1px -1px 0 #e4b684, -1px 1px 0 #e4b684,
+        -1px -1px 0 #e4b684, 1px 0px 0 #e4b684, 0px 1px 0 #e4b684,
+        -1px 0px 0 #e4b684, 0px -1px 0 #e4b684;
+        left: -20vw;
+    }
+}
+.kindGreet > h1:nth-child(2) {
+    /* color: transparent; */
+    left: 15vw;
+    display: inline;
+    animation: leftPlus 0.8s forwards;
+}
+@keyframes leftPlus {
+    to {
+        text-shadow: 1px 1px 0 #e4b684, 1px -1px 0 #e4b684, -1px 1px 0 #e4b684,
+          -1px -1px 0 #e4b684, 1px 0px 0 #e4b684, 0px 1px 0 #e4b684,
+          -1px 0px 0 #e4b684, 0px -1px 0 #e4b684;
+        left: 20vw;
+  }
+}
+.load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+.load > h2 {
+  color: #e4b684;
+  font-size: 0.5em;
+  margin-top: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+    /* text-shadow: #083c56 1px 1px 0; */
+    text-shadow: 0px 3px 3px rgba(198, 198, 198, 0.5);
+}
+.load > span {
+  content: '';
+  position: absolute;
+  background-color: #e4b684;
+  width: 0vw;
+  border-radius: 10px;
+  margin-bottom: 4vw;
+  height: 2%;
+  transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.booleanType {
+  animation: loadings 1.5s linear 0.5s infinite alternate;
+}
+@keyframes loadings {
+  to {
+    width: 55vw;
+  }
+}
+
+/* Loading index part*/
+.Wrapper {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+}

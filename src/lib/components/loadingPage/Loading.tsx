@@ -29,7 +29,7 @@ const Loading = ({
   text = def.text,
   theme = 'light',
   isLoading = def.isLoading,
-}: props): React.ReactElement => {
+}: props): JSX.Element => {
   // theme = theme.toLowerCase() // same here typescript seems convert string twice I can't make validation here
   
   // validation

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Loading from './lib/index'
+import {Loading} from './lib';
 
 function App() {
   return (
